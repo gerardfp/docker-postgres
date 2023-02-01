@@ -1,9 +1,8 @@
 version: "3.8" 
 
 services: 
-  postgres: 
+  postgres_daw: 
     image: postgres 
-    container_name: postgres 
     restart: always 
     ports: 
       - "5432:5432" 
@@ -12,11 +11,10 @@ services: 
       POSTGRES_PASSWORD: admin 
       POSTGRES_DB: mydb 
     volumes:
-      - pgdata:/var/lib/postgresql/data 
+      - pgdata_daw:/var/lib/postgresql/data 
       - ./scriptdb.sql:/docker-entrypoint-initdb.d/scriptdb.sql 
-  pgadmin: 
+  pgadmin_daw: 
     image: dpage/pgadmin4 
-    container_name: pgadmin 
     restart: always 
     ports: 
       - "8080:80" 
@@ -24,7 +22,7 @@ services: 
       PGADMIN_DEFAULT_EMAIL: admin@admin.com 
       PGADMIN_DEFAULT_PASSWORD: admin 
     volumes: 
-      - pgadmin:/var/lib/pgadmin 
+      - pgadmin_daw:/var/lib/pgadmin 
 volumes: 
-  pgdata: 
-  pgadmin: 
+  pgdata_daw: 
+  pgadmin_daw: 

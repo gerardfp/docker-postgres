@@ -1,28 +1,28 @@
-version: "3.8" 
+version: "3.8"
 
-services: 
-  postgres_daw: 
-    image: postgres 
-    restart: always 
-    ports: 
-      - "5432:5432" 
-    environment: 
-      POSTGRES_USER: admin 
-      POSTGRES_PASSWORD: admin 
-      POSTGRES_DB: mydb 
+services:
+  postgres_daw:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: mydb
     volumes:
-      - pgdata_daw:/var/lib/postgresql/data 
-      - ./scriptdb.sql:/docker-entrypoint-initdb.d/scriptdb.sql 
-  pgadmin_daw: 
-    image: dpage/pgadmin4 
-    restart: always 
-    ports: 
-      - "8080:80" 
-    environment: 
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com 
-      PGADMIN_DEFAULT_PASSWORD: admin 
-    volumes: 
-      - pgadmin_daw:/var/lib/pgadmin 
-volumes: 
-  pgdata_daw: 
-  pgadmin_daw: 
+      - pgdata_daw:/var/lib/postgresql/data
+      - ./scriptdb.sql:/docker-entrypoint-initdb.d/scriptdb.sql
+  pgadmin_daw:
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - pgadmin_daw:/var/lib/pgadmin
+volumes:
+  pgdata_daw:
+  pgadmin_daw:

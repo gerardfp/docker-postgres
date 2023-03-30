@@ -21,6 +21,7 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_MAX_LOGIN_ATTEMPTS: 0
     volumes:
       - pgadmin_daw:/var/lib/pgadmin
 volumes:

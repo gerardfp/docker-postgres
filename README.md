@@ -1,32 +1,39 @@
 # docker-postgres
 
 ## Prerequisitos
-Otorgar permisos para ejecutar docker
+Otorgar permisos para ejecutar docker:
 
 ```
 dockerd-rootless-setuptool.sh install
 ```
+<br>
 
 ## Instalación
 
 Descargar [docker-compose.yml](https://github.com/benigaslo/docker-postgres/raw/main/docker-compose.yml)
 
-# Iniciar servicios
+<br>
+
+## Iniciar servicios
 Ir a la carpeta donde está el docker-compose.yml y ejecutar:
 
 ```
 docker compose up
 ```
 
-# Uso
+## Uso
 
 Navegar a http://localhost:8080.
 
+<br>
+
 ## Login  
 
-* admin@admin.com / admin
+* `admin@admin.com` / `admin`
 
 ![](login.png)
+
+<br>
 
 ## Conectar al servidor Postgres
 
@@ -34,14 +41,18 @@ Navegar a http://localhost:8080.
 
 ![](register1.png)
 
-* General > name : "postgres_$USER"
+<br>
+
+* General > name : `postgres_$USER`
 
 ![](register2.png)
 
-* Connection > Host name/address : "postgres_$USER"
+<br>
 
-* Connection > Username : "admin"
+* Connection > Host name/address : `postgres_$USER`
 
-* Connection > Password : "admin"
+* Connection > Username : `admin`
+
+* Connection > Password : `admin`
 
 ![](register3.png)

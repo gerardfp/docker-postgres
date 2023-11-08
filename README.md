@@ -47,6 +47,11 @@ Navegar a http://localhost:8080.
 
 ![](register2.png)
 
+<br> 
+
+> [!NOTE]
+> Sustituir $USER por el nombre de usuario del sistema
+
 <br>
 
 * Connection > Host name/address : `postgres_$USER`

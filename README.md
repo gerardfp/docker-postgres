@@ -29,6 +29,14 @@ admin@admin.com / admin
 
 ## Conectar al servidor Postgres
 
+Ir al menú Object > Register > Server...
 ![](register1.png)
 
+General > name : "postgres_$USER"
 ![](register2.png)
+
+Connection > Host name/address : "postgres_$USER"
+Connection > Username : "admin"
+Connection > Password : "admin"
+
+![](register3.png)
